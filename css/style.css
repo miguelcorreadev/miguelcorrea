@@ -1,0 +1,228 @@
+@charset "UTF-8";
+body{
+  background-image: url(../images/fondo2.jpg); 
+  }
+  header .navbar {
+    background-color: transparent !important;
+  }
+  .loader {
+    color: #0a0a0a;
+    font-family: Consolas, Menlo, Monaco, monospace;
+    font-weight: bold;
+    font-size: 150px;
+    text-align: center;
+    opacity: 0.8;
+  }
+  .loader:before {
+    content: "{";
+    display: inline-block;
+    animation: pulse 0.4s alternate infinite ease-in-out;
+  }
+  .loader:after {
+    content: "}";
+    display: inline-block;
+    animation: pulse 0.4s 0.3s alternate infinite ease-in-out;
+  }
+
+  @keyframes pulse {
+    to {
+      transform: scale(0.8);
+      opacity: 0.5;
+    }
+  }
+      
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 2cap;
+    margin-bottom: 0;
+    list-style: none;
+  }
+  .navbar-brand{
+    margin: 8px 10px 10px 8px !important;
+    text-decoration: none;
+    display: inline-block;
+    color: #01050e !important;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    text-transform: uppercase;
+    outline: none;
+  }
+  
+  .navbar-nav a {
+    margin: 8px 10px 10px 8px !important;
+    text-align: center;
+    text-decoration: solid;
+    display: inline-block;
+    color: #01050e !important;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bolder !important;
+    font-size: 15px;
+    text-transform: uppercase;
+    outline: none;
+  }
+  .navbar-nav a:hover {
+    background-color: dodgerblue;
+    border-radius: 5px;
+  }
+  #imgLogo{
+    width: 50px;
+    height:50px;
+  }
+  
+
+  #box1{
+    position: relative;
+    
+  }
+  #box1::after {content: "";border-radius: 20px; background-color: whitesmoke; opacity: 0.9; top: 0; left: 0; bottom: 0; right: 0; position: absolute; z-index: -1; }
+  #box img{
+    opacity: inherit;
+  }
+  #box1 H1{
+    font-size:5cap;
+  }
+  .load{
+    
+  }
+  #box1 spam{
+    text-align: center;
+  }
+  #box1 p{
+    color: black;
+    font-size:2cap;
+    text-align: justify;
+    padding: 3cap;
+  }
+  .progress{
+    padding: 2% 0% 5% 5%;
+    background-color: transparent;
+    line-height: 2;
+    
+  }
+  .progress p{
+    padding-right: 2cap;
+    margin-right: 4cap;
+    font-weight: bolder;
+    font-size: medium;
+  }
+  progress{
+    width: 270px;
+    height: 30px;
+    
+    overflow:hidden;
+  }
+  @media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .progress{
+      padding: 10% 0% 5% 10%;
+      background-color: transparent;
+      line-height: 2;
+      
+    }
+    progress{
+      width: 270px;
+      height: 3cap;
+      
+      overflow:hidden;
+    }
+  }
+  .experiencia{
+    background-color: white; 
+    padding: 2% 5% 5% 5%;
+    margin: 10px 10px 10px 10px;
+    border-radius: 20px;
+    opacity: 1;
+    height: 15em;
+    text-align: center;
+  }
+  .experiencia img{
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+  }
+  .experiencia img:hover{
+    transform: scale(1.1);
+    transition: .3s;
+    z-index: 1000;
+    border-radius:50%;
+    -webkit-border-radius:50%;
+    box-shadow: 0px 0px 15px 15px dodgerblue;
+    -webkit-box-shadow: 0px 0px 15px 15px dodgerblue;
+}
+
+  .experiencia p{ 
+    position: absolute;
+    bottom: -5px;
+    font-size: large;
+    color: #01050e;
+    font-weight: bold;
+  }
+  #empresas{
+    position: absolute;
+    top: 30%;
+    left: 65%;
+    transform: translate(-65%, -40%);
+  }
+  .formacion{
+    background-color: white; 
+    padding: 2% 1% 5% 1%;
+    margin: 0px;
+    border: 4px solid black; 
+    border-radius: 20px;
+    opacity: 1;
+    text-align: center;
+  }
+  .formacion img{
+    display: inline-block;
+    padding: 2% 1% 5% 1%;
+  }
+  .formacion ul li{
+    text-align:left;
+  }
+  .formacion h2{
+    text-align: center;
+  }
+  .formacion img{
+    padding-bottom: 5%;
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+  }
+  footer {
+    background-color: black;
+    min-height: 20px;
+    height: 20px;
+    width: 100%;
+    position: fixed;
+    bottom: 0; 
+  }
+  .dt2{
+    position: absolute;
+    top: 100%;
+    left: 40%;
+    width: 78%;
+    transform: translateX(-50%);
+    background-color: white !important;
+    color: black;
+    padding: 1cap 2cap 4cap 6cap;
+    display: block;
+    border-radius: 20px;
+  }
+
+  #skills{
+    margin-top: 4cap;
+    padding: 5% 0% 5% 5%;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    opacity: 0.9;
+    line-height: 2;
+    font-size: 2cap;
+    text-align: justify;
+    padding: 3cap;
+  }
+  #skills h1{ 
+    text-align: center;
+    font-weight: bolder;
+  }
