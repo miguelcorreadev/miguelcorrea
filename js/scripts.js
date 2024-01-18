@@ -1,4 +1,5 @@
 // Use this file to add JavaScript to your project
+//import { Empresa } from "./Empresa.js";
 $(window).on('load', function (e) {
     const spinner = document.querySelector("#box1");
     spinner.outerHTML='<div id="box1"class="load">'+
@@ -58,8 +59,11 @@ document.addEventListener("DOMContentLoaded", function() {
                 animateprogress("#C",36);
                 
             } );
-/*-------------------------------- Enlace a web --------------------------------*/
 
+/*-------------------------------- Cargar empresas--------------------------------*/
+
+
+/*-------------------------------- Enlace a web --------------------------------*/
 // Llamada a la función al hacer clic en el botón
 document.getElementById("empresa1").onclick = function() {
    

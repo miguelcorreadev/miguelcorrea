@@ -1,0 +1,24 @@
+{
+    "arrayEmpresas":[{
+            "id": "1",
+            "nombre": "Square Concept (Malta)",
+            "imagen": "images/squareConcept.png",
+            "url": "http://www.squareconcept.com/",
+            "informacion": "informacion"
+        },
+        {
+            "id": "2",
+            "nombre": "Informática Scape",
+            "imagen": "images/LOGO SCAPE.png",
+            "url": "https://scapeinformatica.com/",
+            "informacion": "informacion"
+        },
+        {
+            "id": "3",
+            "nombre": "InforServer S.L",
+            "imagen": "images/is.png",
+            "url": "'http://www.inforserversl.com/'",
+            "informacion": "informacion"
+        }
+    ]
+}
