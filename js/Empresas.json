@@ -4,21 +4,46 @@
             "nombre": "Square Concept (Malta)",
             "imagen": "images/squareConcept.png",
             "url": "http://www.squareconcept.com/",
-            "informacion": "informacion"
+            "fechas":"09/2006 -11/2006",
+            "informacion": [
+                {
+                  "info1": "Diseño y desarrollo Web "
+                }
+              ]
         },
         {
             "id": "2",
             "nombre": "Informática Scape",
             "imagen": "images/LOGO SCAPE.png",
             "url": "https://scapeinformatica.com/",
-            "informacion": "informacion"
+            "fechas":"01/2007 - 06/2012",
+            "informacion": [
+                {
+                  "info1": "Servicio Técnico, Mantenimiento y reparación de equipos en taller e insitu,<br> administración de redes, docente en academia de informática,<br>venta de productos informáticos, oficina y trato cara el público."
+                }
+              ]
         },
         {
             "id": "3",
             "nombre": "InforServer S.L",
             "imagen": "images/is.png",
             "url": "'http://www.inforserversl.com/'",
-            "informacion": "informacion"
+            "fechas":"07/2012 - 08/2023",
+            "informacion": [
+                {
+                  "info1": "<ul><li>Administrador de Sistemas y Soporte Técnico</li>",
+                  "info2": "<ul><li>Soporte técnico en farmacias de Pontevedra y Ourense.</li>",
+                  "info3": "<li>Distribución y soporte de AGF Nixfarma.</li></ul>",
+                  "info4": "<li>Experiencia en Sistemas:</li>",
+                  "info5": "<ul><li>Implementación de Servidores HP Proliant con Windows Server.</li>",
+                  "info6": "<li>Instalación y configuración de Redes.</li></ul>",
+                  "info7": "<li>Técnico Oficial de Cajones Inteligentes: CashGuard, CashInfinity, CashLogy.</li>",
+                  "info8": "<li>Desarrollo Web: Desarrollo y mantenimiento de páginas web.</li>",
+                  "info9": "<li>Soporte de Software de Hostelería: BDP, Ágora y MenuLan.</li>",
+                  "info10": "<li>Etiquetas Electrónicas: Instalación, configuración y diseño de etiquetas electrónicas Pricer.</li></ul>"
+                }
+              ]
+            }
         }
     ]
 }

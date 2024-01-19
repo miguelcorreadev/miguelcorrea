@@ -61,8 +61,19 @@ document.addEventListener("DOMContentLoaded", function() {
             } );
 
 /*-------------------------------- Cargar empresas--------------------------------*/
-
-
+document.addEventListener('DOMContentLoaded', function () {
+    // Utilizar fetch para obtener los datos del archivo JSON
+    // Fetch de Empresas con 'no-cors' mode
+    fetch('./js/Empresas.json', { mode: 'no-cors' })
+    .then(response => {
+        console.log(response);
+        return response.json();
+    })
+    .then(data => {
+        console.log(data);
+    })
+    .catch(error => console.error('Error al cargar el archivo JSON:', error));
+});
 /*-------------------------------- Enlace a web --------------------------------*/
 // Llamada a la función al hacer clic en el botón
 document.getElementById("empresa1").onclick = function() {
@@ -92,22 +103,16 @@ function mostrarDescripcion(opc) {
     }
     if(opc==3){
         descripción.outerHTML="<div id='dt' class='dt2'><h2>InforServer S.L:</h2><p>07/2012 - 08/2023</p>"+
-        "<ul>"+
-            "<li>Administrador de Sistemas y Soporte Técnico</li>"+
-                "<ul>"+
-                    "<li>Soporte técnico en farmacias de Pontevedra y Ourense.</li>"+
-                    "<li>Distribución y soporte de AGF Nixfarma.</li>"+
-                "</ul>"+
+        "<ul><li>Administrador de Sistemas y Soporte Técnico</li>"+
+                "<ul><li>Soporte técnico en farmacias de Pontevedra y Ourense.</li>"+
+                    "<li>Distribución y soporte de AGF Nixfarma.</li></ul>"+
             "<li>Experiencia en Sistemas:</li>"+
-                "<ul>"+
-                    "<li>Implementación de Servidores HP Proliant con Windows Server.</li>"+
-                    "<li>Instalación y configuración de Redes.</li>"+
-                "</ul>"+
+                "<ul><li>Implementación de Servidores HP Proliant con Windows Server.</li>"+
+                    "<li>Instalación y configuración de Redes.</li></ul>"+
             "<li>Técnico Oficial de Cajones Inteligentes: CashGuard, CashInfinity, CashLogy.</li>"+
             "<li>Desarrollo Web: Desarrollo y mantenimiento de páginas web.</li>"+
             "<li>Soporte de Software de Hostelería: BDP, Ágora y MenuLan.</li>"+
-            "<li>Etiquetas Electrónicas: Instalación, configuración y diseño de etiquetas electrónicas Pricer.</li>"+
-        "</ul></div>";
+            "<li>Etiquetas Electrónicas: Instalación, configuración y diseño de etiquetas electrónicas Pricer.</li></ul></div>";
     }
     
   }
