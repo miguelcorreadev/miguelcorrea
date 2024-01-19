@@ -2,7 +2,7 @@
     "arrayEmpresas":[{
             "id": "1",
             "nombre": "Square Concept (Malta)",
-            "imagen": "images/squareConcept.png",
+            "imagen": "./images/squareConcept.png",
             "url": "http://www.squareconcept.com/",
             "fechas":"09/2006 -11/2006",
             "informacion": [
@@ -14,7 +14,7 @@
         {
             "id": "2",
             "nombre": "Informática Scape",
-            "imagen": "images/LOGO SCAPE.png",
+            "imagen": "./images/LOGO SCAPE.png",
             "url": "https://scapeinformatica.com/",
             "fechas":"01/2007 - 06/2012",
             "informacion": [
@@ -26,7 +26,7 @@
         {
             "id": "3",
             "nombre": "InforServer S.L",
-            "imagen": "images/is.png",
+            "imagen": "./images/is.png",
             "url": "'http://www.inforserversl.com/'",
             "fechas":"07/2012 - 08/2023",
             "informacion": [

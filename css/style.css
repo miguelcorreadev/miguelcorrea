@@ -205,9 +205,9 @@ body{
   }
   .dt2{
     position: absolute;
-    top: 100%;
-    left: 40%;
-    width: 78%;
+    top: 55%;
+    left: 48%;
+    width: 55%;
     transform: translateX(-50%);
     background-color: white !important;
     color: black;

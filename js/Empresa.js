@@ -1,26 +1,28 @@
 
-  export class Empresa{
-    constructor(id, nombre, imagen,  informacion){
-        this.id = id;
-        this.nombre = nombre;
-        this.imagen = imagen;
-        this.url = url;
-        this.informacion = informacion;
+  class Empresa{
+    constructor(id, nombre, imagen, url, fechas){
+        this._id = id;
+        this._nombre = nombre;
+        this._imagen = imagen;
+        this._url = url;
+        this._fechas = fechas
     }
-    setId(){
-        return this.nombre;
+    getId(){
+        return this._nombre;
     }
-     setNombre(){
-        return this.nombre;
+    getNombre(){
+        return this._nombre;
     }
-    setImagen() {
-        return this.imagen;
+    getImagen() {
+        return this._imagen;
       }
-      setUrl() {
-        return this.url;
+      getUrl() {
+        return this._url;
       }
-    setInformacion() {
-        return this.informacion;
+      getFechas() {
+        return this._fechas;
       }
 
 }
+// Hacer que la clase esté disponible globalmente
+window.Empresa = Empresa;
