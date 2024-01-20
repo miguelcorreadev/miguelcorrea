@@ -215,6 +215,15 @@ body{
     display: block;
     border-radius: 20px;
   }
+  .contacto {
+    background-color: whitesmoke;
+    padding: 5%;
+    width: 80%;
+    border-radius: 5%;
+    margin: auto; 
+    max-width: 600px; 
+  }
+  
 
   #skills{
     margin-top: 4cap;

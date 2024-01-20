@@ -97,6 +97,8 @@ for (let i = 0; i < arrayEmpresas.length; i++) {
     const empresaImg = document.createElement('img');
     empresaImg.src = empresa.getImagen();
     empresaImg.alt = empresa.getNombre();
+    empresaImg.classList.add('img-fluid'); // Clase Bootstrap para imágenes responsivas
+
 
     // Crea el párrafo
     const empresaP = document.createElement('p');
@@ -179,3 +181,15 @@ function mostrarDescripcion(opc) {
     descripción.style.display = 'none';
     
   }
+  function enviarCorreo() {
+    emailjs.init("service_4ins5jk"); // Reemplaza "user_tu_api_key" con tu clave de API de Email.js
+
+    var form = document.getElementById("myForm");
+
+    emailjs.sendForm("Gmail", "plantillaMC", new FormData(form))
+        .then(function (response) {
+            alert("Correo enviado con éxito", response);
+        }, function (error) {
+            alert("Error al enviar el correo", error);
+        });
+}
