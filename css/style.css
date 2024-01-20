@@ -139,8 +139,10 @@ body{
     margin: 10px 10px 10px 10px;
     border-radius: 20px;
     opacity: 1;
-    height: 15em;
+    height:40%;
+    width: 20%;
     text-align: center;
+    position: relative;
   }
   .experiencia img{
     width: 100%;
@@ -160,10 +162,11 @@ body{
   .experiencia p{ 
     position: absolute;
     bottom: -5px;
-    font-size: large;
+    font-size: 100%;
     color: #01050e;
     font-weight: bold;
   }
+  
   #empresas{
     position: absolute;
     top: 30%;
@@ -197,17 +200,23 @@ body{
   }
   footer {
     background-color: black;
-    min-height: 20px;
     height: 20px;
     width: 100%;
     position: fixed;
-    bottom: 0; 
+    bottom: 0px;
+    padding: 0%;
+  }
+  footer p{
+    font-size: small;
+    padding-top: 0%;
+    color: white;
+    text-align: center;
   }
   .dt2{
-    position: absolute;
-    top: 55%;
-    left: 48%;
-    width: 55%;
+    position: fixed;
+    top: 100%;
+    left: 40%;
+    width: 76%;
     transform: translateX(-50%);
     background-color: white !important;
     color: black;
