@@ -5,15 +5,13 @@ let empresa1;
 let empresa2;
 let empresa3;
 document.addEventListener('DOMContentLoaded', function () {
-    $(window).on('load', function (e) {
+    $(window).on('load', (e) => {
         const spinner = document.querySelector("#box1");
-        spinner.outerHTML='<div id="box1"class="load">'+
-        '<span class="loader"></span>'+
-        '</div>';
-        setTimeout(function(){ 
+        spinner.outerHTML = '<div id="box1" class="load"><span class="loader"></span></div>';
+        setTimeout(() => {
             mostrarTextoIndex();
-         }, 3000);
-     });
+        }, 3000);
+    });
      /*----------------------------- NAV ------------------------------------*/
      const container = document.querySelector(".cabecera");
     container.outerHTML="<a class='navbar-brand' href='index.html'><img id='imgLogo' src='images/fotoMC.png' alt='Logo' /> Miguel Correa </a>"+
@@ -35,18 +33,35 @@ document.addEventListener('DOMContentLoaded', function () {
                     "</li>"+
                 "</ul>"+    
                 "</div>";
- 
+     /*----------------------------- NAV ------------------------------------*/
+        // Obtén el nombre de la página actual, por ejemplo, desde la URL
+        var currentPage = window.location.href.split("/").pop();
+
+        // Obtén todos los elementos <a> dentro de los elementos <li> en el menú
+        var menuItems = document.querySelectorAll(".navbar-nav li");
+
+        // Itera sobre los elementos del menú
+        menuItems.forEach(function(item) {
+            // Obtén el enlace dentro del elemento <li>
+            var link = item.querySelector("a");
+
+            // Verifica si la href del enlace coincide con la página actual
+            if (link.getAttribute("href") === currentPage) {
+                // Si coincide, añade la clase 'active' al elemento <li>
+                item.classList.add("active");
+            }
+        });
  /*----------------------------- Animacion barras carga ------------------------------------*/
-                animateprogress("#JavaScript",91);
+                animateprogress("#JavaScript",70);
                 animateprogress("#Java",72);
-                animateprogress("#Android",86);
-                animateprogress("#Html",52);
-                animateprogress("#CSS",79);
-                animateprogress("#PHP",36);
-                animateprogress("#SQL",86);
-                animateprogress("#Python",52);
-                animateprogress("#React",79);
-                animateprogress("#C",36);
+                animateprogress("#Android",50);
+                animateprogress("#Html",85);
+                animateprogress("#CSS",80);
+                animateprogress("#PHP",70);
+                animateprogress("#SQL",65);
+                animateprogress("#Python",40);
+                animateprogress("#React",36);
+                animateprogress("#C",30);
     /*----------------------------- Trabajar con la clse Empresa.js ------------------------------------*/
     const scriptEmpresa = document.createElement('script');
     scriptEmpresa.src = './js/Empresa.js'; // Ruta relativa o absoluta a Empresa.js
@@ -90,8 +105,9 @@ for (let i = 0; i < arrayEmpresas.length; i++) {
 
     // Crea el enlace
     const empresaLink = document.createElement('a');
-    empresaLink.href = '#';
+    empresaLink.href = empresa.getUrl();
     empresaLink.id = `empresa${i + 1}`;
+    empresaLink.target = "_blank"; 
 
     // Crea la imagen
     const empresaImg = document.createElement('img');
@@ -117,9 +133,6 @@ for (let i = 0; i < arrayEmpresas.length; i++) {
     });
 });
 
-   
-
-
  function mostrarTextoIndex() {
     const contenidoPer = document.querySelector("#box1");
     contenidoPer.outerHTML='<div id="box1"class="row gx-4 gx-lg-5 align-items-center my-5">'+
@@ -133,8 +146,9 @@ for (let i = 0; i < arrayEmpresas.length; i++) {
   }
 
 /*-------------------------------- Enlace a web --------------------------------*/
-// Llamada a la función al hacer clic en el botón
-document.getElementById("empresa1").onclick = function() {
+// Esta función se utilizaba para cuando haciamos clicc sobre el elace se abriera
+//una nueva pestaña en el navegador con la web de la empresa presionada.
+/*document.getElementById("empresa1").onclick = function() {
    
     window.open(empresa1.getUrl(), '_blank');
 };
@@ -145,7 +159,7 @@ document.getElementById("empresa2").onclick = function() {
 
 document.getElementById("empresa3").onclick = function() {
     window.open(empresa3.getUrl(), '_blank');
-};
+};*/
 
 /*-------------------------------- Descripción trabajo --------------------------------*/
 const descripción = document.getElementById('dt');
@@ -181,7 +195,53 @@ function mostrarDescripcion(opc) {
     descripción.style.display = 'none';
     
   }
+  /*-------------------------------- Correo --------------------------------*/
   function enviarCorreo() {
+    // Obtén los elementos del formulario
+    var nombreInput = document.getElementById('nombre');
+    var correoInput = document.getElementById('correo');
+    var mensajeTextarea = document.getElementById('mensaje');
+
+    if (nombreInput.value.trim() === '' || mensajeTextarea.value.trim() === '') {
+        alert('Por favor, complete todos los campos obligatorios.');
+        if (nombreInput.value.trim() === '') {
+            nombreInput.classList.add('error');
+        }
+        if (mensajeTextarea.value.trim() === '') {
+            mensajeTextarea.classList.add('error');
+        }
+        return; 
+    } else {
+        nombreInput.classList.remove('error');
+        mensajeTextarea.classList.remove('error');
+    }
+
+    // Valida el correo electrónico
+    if (!validarCorreo(correoInput.value)) {
+        correoInput.classList.add('error');
+        alert('Por favor, ingrese una dirección de correo electrónico válida.');
+        return; 
+    } else {
+        correoInput.classList.remove('error');
+    }
+
+    // Lógica para enviar el formulario aquí
+    // ...
+
+    // Restablece estilos y valores después del envío exitoso
+    nombreInput.value = '';
+    correoInput.value = '';
+    mensajeTextarea.value = '';
+    nombreInput.classList.remove('error');
+    correoInput.classList.remove('error');
+}
+
+function validarCorreo(correo) {
+    // Expresión regular para validar el formato del correo electrónico
+    var regexCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regexCorreo.test(correo);
+}
+ /* function enviarCorreo() {
     emailjs.init("service_4ins5jk"); // Reemplaza "user_tu_api_key" con tu clave de API de Email.js
 
     var form = document.getElementById("myForm");
@@ -192,4 +252,4 @@ function mostrarDescripcion(opc) {
         }, function (error) {
             alert("Error al enviar el correo", error);
         });
-}
+}*/
