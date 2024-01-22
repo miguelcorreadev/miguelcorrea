@@ -1,17 +1,21 @@
-// Use this file to add JavaScript to your project
-//import { Empresa } from "./Empresa.js";
+import { Empresa } from "./Empresa.js";
 // Declarar la variable global
 let empresa1;
 let empresa2;
 let empresa3;
 document.addEventListener('DOMContentLoaded', function () {
-    $(window).on('load', (e) => {
+    if (window.location.pathname.endsWith("index.html")) {
+        // Tu código aquí
         const spinner = document.querySelector("#box1");
-        spinner.outerHTML = '<div id="box1" class="load"><span class="loader"></span></div>';
-        setTimeout(() => {
-            mostrarTextoIndex();
-        }, 3000);
-    });
+        if (spinner) {
+            spinner.outerHTML = '<div id="box1" class="load"><span class="loader"></span></div>';
+            setTimeout(() => {
+                mostrarTextoIndex();
+            }, 3000);
+        } else {
+            console.error('Elemento con id "box1" no encontrado.');
+        }
+    }
      /*----------------------------- NAV ------------------------------------*/
      const container = document.querySelector(".cabecera");
     container.outerHTML="<a class='navbar-brand' href='index.html'><img id='imgLogo' src='images/fotoMC.png' alt='Logo' /> Miguel Correa </a>"+
@@ -63,74 +67,56 @@ document.addEventListener('DOMContentLoaded', function () {
                 animateprogress("#React",36);
                 animateprogress("#C",30);
     /*----------------------------- Trabajar con la clse Empresa.js ------------------------------------*/
-    const scriptEmpresa = document.createElement('script');
-    scriptEmpresa.src = './js/Empresa.js'; // Ruta relativa o absoluta a Empresa.js
-    scriptEmpresa.type = 'text/javascript';
-    document.head.appendChild(scriptEmpresa);
-
-    // Evento personalizado que se disparará cuando las instancias de Empresa estén listas
-    const empresasListasEvent = new Event('empresasListas');
-
-    scriptEmpresa.onload = function () {
-        // Crear instancia de Empresa
-        empresa1 = new window.Empresa("1", "Square Concept (Malta)", "./images/squareConcept.png", "http://www.squareconcept.com/", "09/2006 -11/2006");
-        empresa2 = new window.Empresa("2", "Informática Scape", "./images/LOGO SCAPE.png", "https://scapeinformatica.com/", "01/2007 - 06/2012");
-        empresa3 = new window.Empresa("3", "InforServer S.L.", "./images/is.png", "http://www.inforserver.es/", "01/2007 - 06/2012");
-        // Acceder a los métodos de la instancia
-        console.log(empresa1.getNombre());
-
-        // Despachar el evento empresasListas
-        document.dispatchEvent(empresasListasEvent);
-    };
-
-    // Esperar hasta que las instancias de Empresa estén listas
-    document.addEventListener('empresasListas', function () {
+    
+    
+        empresa1 = new Empresa("1", "Square Concept (Malta)", "./images/squareConcept.png", "http://www.squareconcept.com/", "09/2006 -11/2006");
+        empresa2 = new Empresa("2", "Informática Scape", "./images/LOGO SCAPE.png", "https://scapeinformatica.com/", "01/2007 - 06/2012");
+        empresa3 = new Empresa("3", "InforServer S.L.", "./images/is.png", "http://www.inforserver.es/", "01/2007 - 06/2012");
+         
+        console.log(empresa2.getNombre());
         const arrayEmpresas = [empresa1, empresa2, empresa3,]; 
 
-        // Obtén el contenedor donde deseas agregar los elementos
-const empresasContainer = document.getElementById('empresas');
+        const empresasContainer = document.getElementById('empresas');
+        empresasContainer.style.display = 'flex';
 
-// Configura el contenedor como un contenedor flexible (flex container)
-empresasContainer.style.display = 'flex';
+        // Recorre el array de empresas para crear los elementos y agregarlos al contenedor
+        for (let i = 0; i < arrayEmpresas.length; i++) {
+            const empresa = arrayEmpresas[i];
 
-// Recorre el array de empresas para crear los elementos y agregarlos al contenedor
-for (let i = 0; i < arrayEmpresas.length; i++) {
-    const empresa = arrayEmpresas[i];
+            // Crea el contenedor principal
+            const empresaDiv = document.createElement('div');
+            empresaDiv.classList.add('col-sm-3', 'experiencia');
+            empresaDiv.addEventListener('mouseover', () => mostrarDescripcion(i + 1));
+            empresaDiv.addEventListener('mouseout', ocultarDescripcion);
 
-    // Crea el contenedor principal
-    const empresaDiv = document.createElement('div');
-    empresaDiv.classList.add('col-sm-3', 'experiencia');
-    empresaDiv.addEventListener('mouseover', () => mostrarDescripcion(i + 1));
-    empresaDiv.addEventListener('mouseout', ocultarDescripcion);
+            // Crea el enlace
+            const empresaLink = document.createElement('a');
+            empresaLink.href = empresa.getUrl();
+            empresaLink.id = `empresa${i + 1}`;
+            empresaLink.target = "_blank"; 
 
-    // Crea el enlace
-    const empresaLink = document.createElement('a');
-    empresaLink.href = empresa.getUrl();
-    empresaLink.id = `empresa${i + 1}`;
-    empresaLink.target = "_blank"; 
-
-    // Crea la imagen
-    const empresaImg = document.createElement('img');
-    empresaImg.src = empresa.getImagen();
-    empresaImg.alt = empresa.getNombre();
-    empresaImg.classList.add('img-fluid'); // Clase Bootstrap para imágenes responsivas
+            // Crea la imagen
+            const empresaImg = document.createElement('img');
+            empresaImg.src = empresa.getImagen();
+            empresaImg.alt = empresa.getNombre();
+            empresaImg.classList.add('img-fluid'); // Clase Bootstrap para imágenes responsivas
 
 
-    // Crea el párrafo
-    const empresaP = document.createElement('p');
-    empresaP.textContent = empresa.getNombre();
+            // Crea el párrafo
+            const empresaP = document.createElement('p');
+            empresaP.textContent = empresa.getNombre();
 
-    // Agrega los elementos al enlace y el enlace al contenedor principal
-    empresaLink.appendChild(empresaImg);
-    empresaLink.appendChild(empresaP);
-    empresaDiv.appendChild(empresaLink);
+            // Agrega los elementos al enlace y el enlace al contenedor principal
+            empresaLink.appendChild(empresaImg);
+            empresaLink.appendChild(empresaP);
+            empresaDiv.appendChild(empresaLink);
 
-    // Agrega el contenedor principal al contenedor general
-    empresasContainer.appendChild(empresaDiv);
-    const descripción = document.getElementById('dt');
-    descripción.style.display = 'none';
-}   
-    });
+            // Agrega el contenedor principal al contenedor general
+            empresasContainer.appendChild(empresaDiv);
+            const descripción = document.getElementById('dt');
+            descripción.style.display = 'none';
+        }   
+    
 });
 
  function mostrarTextoIndex() {
@@ -144,27 +130,25 @@ for (let i = 0; i < arrayEmpresas.length; i++) {
     '</div>';
     
   }
+  function ajustarPosicionDt2(empresaDiv) {
+    // Obtener la posición de la empresa en relación con la ventana
+    const empresaRect = empresaDiv.getBoundingClientRect();
+    
+    // Calcular la posición de .dt2 en función de la posición de la empresa
+    const dt2 = document.querySelector('.dt2');
+    const dt2Top = empresaRect.top + empresaRect.height / 2 - dt2.offsetHeight / 2;
+    const dt2Left = empresaRect.left + empresaRect.width / 2 - dt2.offsetWidth / 2;
 
-/*-------------------------------- Enlace a web --------------------------------*/
-// Esta función se utilizaba para cuando haciamos clicc sobre el elace se abriera
-//una nueva pestaña en el navegador con la web de la empresa presionada.
-/*document.getElementById("empresa1").onclick = function() {
-   
-    window.open(empresa1.getUrl(), '_blank');
-};
-
-document.getElementById("empresa2").onclick = function() {
-    window.open(empresa2.getUrl(), '_blank');
-};
-
-document.getElementById("empresa3").onclick = function() {
-    window.open(empresa3.getUrl(), '_blank');
-};*/
+    // Aplicar la nueva posición a .dt2
+    dt2.style.top = `${dt2Top}px`;
+    dt2.style.left = `${dt2Left}px`;
+}
 
 /*-------------------------------- Descripción trabajo --------------------------------*/
 const descripción = document.getElementById('dt');
 descripción.style.display = 'none';
 function mostrarDescripcion(opc) {
+    document.body.classList.add('show-scroll');
     const descripción = document.getElementById('dt');
     descripción.style.display = 'block';
     if(opc==1){
@@ -193,6 +177,7 @@ function mostrarDescripcion(opc) {
   function ocultarDescripcion() {
     const descripción = document.getElementById('dt');
     descripción.style.display = 'none';
+    document.body.classList.remove('show-scroll');
     
   }
   /*-------------------------------- Correo --------------------------------*/
@@ -225,10 +210,6 @@ function mostrarDescripcion(opc) {
         correoInput.classList.remove('error');
     }
 
-    // Lógica para enviar el formulario aquí
-    // ...
-
-    // Restablece estilos y valores después del envío exitoso
     nombreInput.value = '';
     correoInput.value = '';
     mensajeTextarea.value = '';

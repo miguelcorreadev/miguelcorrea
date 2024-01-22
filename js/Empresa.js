@@ -1,5 +1,5 @@
 
-  class Empresa{
+  export class Empresa{
     constructor(id, nombre, imagen, url, fechas){
         this._id = id;
         this._nombre = nombre;
@@ -8,7 +8,7 @@
         this._fechas = fechas
     }
     getId(){
-        return this._nombre;
+        return this._id;
     }
     getNombre(){
         return this._nombre;
@@ -25,4 +25,4 @@
 
 }
 // Hacer que la clase esté disponible globalmente
-window.Empresa = Empresa;
+//window.Empresa = Empresa;

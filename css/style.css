@@ -1,7 +1,14 @@
 @charset "UTF-8";
+html, body {
+  height: 100%;
+}
 body{
   background-image: url(../images/fondo2.jpg); 
+  overflow-y: auto;
   }
+  body.show-scroll {
+    overflow-y: auto;
+}
   header .navbar {
     background-color: transparent !important;
   }
@@ -150,6 +157,7 @@ body{
     width: 20%;
     text-align: center;
     position: relative;
+    height: 200px;
   }
   .experiencia img{
     width: 100%;
@@ -174,19 +182,22 @@ body{
     font-weight: bold;
   }
   .dt2{
-    position: fixed;
-    top: 50%;
-    left: 23%;
+    position: absolute;
+    top: 98%;
+    width: 80%;
     background-color: white !important;
     color: black;
     padding: 1% 2% 1% 2%;
     display: block;
     border-radius: 20px;
+    overflow-y: auto !important;
   }
   @media only screen and (max-width: 767px) {
     .experiencia {
         width: 100%; 
         margin: 10px 0;
+        margin-right: 10px;
+        height: 130px;
     }
     .experiencia p{ 
       display: none;
@@ -195,7 +206,7 @@ body{
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-  }
+    }
   .dt2{
     position: fixed;
     top: 40%;
@@ -243,16 +254,15 @@ body{
     height: auto;
   }
   footer {
-    background-color: black;
-    height: 20px;
+    background-color: rgba(0, 0, 0, 0.9);
+    height: 30px;
     width: 100%;
     position: fixed;
     bottom: 0px;
-    padding: 0%;
-  }
+    padding: 5px 0; /* Ajusta el relleno según sea necesario */
+}
   footer p{
     font-size: small;
-    padding-top: 0%;
     color: white;
     text-align: center;
   }
