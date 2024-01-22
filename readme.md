@@ -2,7 +2,7 @@
 
 [Enlace al Proyecto](https://miguelcorreadev.github.io/miguelcorrea/index.html)
 ## Tabla de contenidos
-1. [Leyes UX](#Leyes_UX)
+1. [Leyes UX](#Leyes_ux)
 2. [Tecnologías](#tecnologias)
 3. [Javascript](#javascript)
 4. [Navegación](#navegacion)
@@ -19,7 +19,7 @@ En este proyecto se han aplicado las siguientes __leyes UX__:
 </div>
 
 
-* __Ley de Jakob__: usar patrones familiares en el diseño para facilitar la experiencia del usuario uso de un menú sencillo y web minimalista.
+* __Ley de Jakob__: usar patrones familiares en el diseño para facilitar la experiencia del usuario, uso de un menú sencillo y web minimalista.
 * __Efecto de estética-usabilidad__: Interfaz atractiva con imagen visual.
 * __Ley de Postel__: En el formulario de contacto se avisa mediante un alert, si se introduce una estructura de la dirección de email incorrecta o si falta algún campo.
 * __Umbral de Doherty__: En la página de inicio aparece una animación que nos hace percibir que se esta cargando.
