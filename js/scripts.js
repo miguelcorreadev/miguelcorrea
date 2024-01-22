@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 mostrarTextoIndex();
             }, 3000);
         } else {
-            alert('Error en la carga de la página');
+            
         }
     //}
      /*----------------------------- NAV ------------------------------------*/
