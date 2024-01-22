@@ -1,12 +1,12 @@
 # T4.1DevDoc UX UI Accesibilidad Inclusividad 
 ## Tabla de contenidos
-1. [Leyes UX](#general-info)
-2. [Technologies](#technologies)
-3. [Installation](#installation)
+1. [Leyes UX](#Leyes_UX)
+2. [Tecnologías](#tecnologias)
+3. [Javascript](#javascript)
 4. [Collaboration](#collaboration)
 5. [FAQs](#faqs)
 
-### Leyes UX 
+## Leyes UX 
 ***
 Es este proyecto se han aplicado las siguientes leyes UX: 
 * __Ley de Fitts__: establece que cuanto más grande sea un objeto y más cerca esté de nosotros, más fácil será alcanzarlo, influyó en la convención de hacer que los botones interactivos sean más grandes.
@@ -16,15 +16,21 @@ Es este proyecto se han aplicado las siguientes leyes UX:
 * __Ley de Jakob__: usar patrones familiares en el diseño para facilitar la experiencia del usuario uso de un menú sencillo y web minimalista.
 * __Efecto de estética-usabilidad__: Interfaz atractiva con imagen visual.
 * __Ley de Postel__: En el formulario de contacto se avisa mediante un alert, si se introduce una estructura de la dirección de email incorrecta o si falta algún campo.
-### Screenshot
-![Image text](https://miguelcorreadev.github.io/miguelcorrea/images/DAM.jpg)
-## Technologies
+* __Umbral de Doherty__: En la página de inicio aparece una animación que nos hace percibir que se esta cargando.
+
+![Image text](https://miguelcorreadev.github.io/miguelcorrea/DOC/imagenes/Doherty.png)
+
+* __Principio de la Navaja de Occam__: Diseño limpio y minimalista, se puede observar que existe un flujo de navegación claro, el usuario siempre sabe donde esta, el menu queda sobreado en azul en la sección corespondiente (Se puede observar en la captura de la Ley de Fitts).
+
+
+## Tecnologias
 ***
-A list of technologies used within the project:
-* [Technologie name](https://example.com): Version 12.3 
-* [Technologie name](https://example.com): Version 2.34
-* [Library name](https://example.com): Version 1234
-## Installation
+En este proyecto se ha utilizado las siguientes tecnologías:
+* JavaScript
+* HTML
+* [CSS](https://example.com)
+
+## Javascript
 ***
 A little intro about the installation. 
 ```
