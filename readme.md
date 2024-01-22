@@ -140,3 +140,11 @@ container.outerHTML="<a class='navbar-brand' href='index.html'><img id='imgLogo'
 "<button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>"+
                 "<span class='navbar-toggler-icon'></span></button>"+
 ```
+
+## WAVE
+***
+Se ha examinado minuciosamente conla extensión de WAVE los posibles errores de accesibilidad y actualmente no tiene ninguno, salvo uno de contraste en el botón de enviar del formulario de contacto.
+
+## Nota aclarativa
+***
+La validación del formulario actualmente no esta funcionando, he revisado y al realizar la configuración previa para import/Export de la clase, ha dejado de funcionar, en pruebas anteriores si estaba incompleto algún campo, saltaba un error y si la dirección  de correo estaba mal estructurada tambien avisaba.
