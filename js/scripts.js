@@ -12,11 +12,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 mostrarTextoIndex();
             }, 3000);
         } else {
-            console.error('Elemento con id "box1" no encontrado.');
+            alert('Error en la carga de la página');
         }
     //}
      /*----------------------------- NAV ------------------------------------*/
-     const container = document.querySelector(".cabecera");
+    const container = document.querySelector(".cabecera");
     container.outerHTML="<a class='navbar-brand' href='index.html'><img id='imgLogo' src='images/fotoMC.png' alt='FotoPerfil' /> Miguel Correa </a>"+
                 "<button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>"+
                 "<span class='navbar-toggler-icon'></span></button>"+
