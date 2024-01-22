@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const arrayEmpresas = [empresa1, empresa2, empresa3,]; 
 
         const empresasContainer = document.getElementById('empresas');
-        empresasContainer.style.display = 'flex';
+       // empresasContainer.style.display = 'flex';
 
         // Recorre el array de empresas para crear los elementos y agregarlos al contenedor
         for (let i = 0; i < arrayEmpresas.length; i++) {
@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 /*-------------------------------- Descripción trabajo --------------------------------*/
 const descripción = document.getElementById('dt');
-descripción.style.display = 'none';
+//descripción.style.display = 'none';
 function mostrarDescripcion(opc) {
     document.body.classList.add('show-scroll');
     const descripción = document.getElementById('dt');
