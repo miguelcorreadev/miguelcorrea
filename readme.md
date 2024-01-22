@@ -8,8 +8,14 @@
 
 ### Leyes UX 
 ***
-Es este proyecto se ha aplicado las siguientes leyes UX: 
-* Ley de Fitts: establece que cuanto más grande sea un objeto y más cerca esté de nosotros, más fácil será alcanzarlo, influyó en la convención de hacer que los botones interactivos sean más grandes.
+Es este proyecto se han aplicado las siguientes leyes UX: 
+* __Ley de Fitts__: establece que cuanto más grande sea un objeto y más cerca esté de nosotros, más fácil será alcanzarlo, influyó en la convención de hacer que los botones interactivos sean más grandes.
+
+![Image text](https://miguelcorreadev.github.io/miguelcorrea/DOC/imagenes/Fitts.png)
+
+* __Ley de Jakob__: usar patrones familiares en el diseño para facilitar la experiencia del usuario uso de un menú sencillo y web minimalista.
+* __Efecto de estética-usabilidad__: Interfaz atractiva con imagen visual.
+* __Ley de Postel__: En el formulario de contacto se avisa mediante un alert, si se introduce una estructura de la dirección de email incorrecta o si falta algún campo.
 ### Screenshot
 ![Image text](https://miguelcorreadev.github.io/miguelcorrea/images/DAM.jpg)
 ## Technologies
