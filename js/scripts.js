@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
      /*----------------------------- NAV ------------------------------------*/
      const container = document.querySelector(".cabecera");
-    container.outerHTML="<a class='navbar-brand' href='index.html'><img id='imgLogo' src='images/fotoMC.png' alt='Logo' /> Miguel Correa </a>"+
+    container.outerHTML="<a class='navbar-brand' href='index.html'><img id='imgLogo' src='images/fotoMC.png' alt='FotoPerfil' /> Miguel Correa </a>"+
                 "<button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>"+
                 "<span class='navbar-toggler-icon'></span></button>"+
                 "<div class='collapse navbar-collapse' id='navbarSupportedContent'>"+

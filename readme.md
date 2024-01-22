@@ -1,13 +1,15 @@
 # T4.1DevDoc UX UI Accesibilidad Inclusividad 
-## Table of Contents
-1. [General Info](#general-info)
+## Tabla de contenidos
+1. [Leyes UX](#general-info)
 2. [Technologies](#technologies)
 3. [Installation](#installation)
 4. [Collaboration](#collaboration)
 5. [FAQs](#faqs)
-### General Info
+
+### Leyes UX 
 ***
-Write down the general informations of your project. It is worth to always put a project status in the Readme file. This is where you can add it. 
+Es este proyecto se ha aplicado las siguientes leyes UX: 
+* Ley de Fitts: establece que cuanto más grande sea un objeto y más cerca esté de nosotros, más fácil será alcanzarlo, influyó en la convención de hacer que los botones interactivos sean más grandes.
 ### Screenshot
 ![Image text](https://miguelcorreadev.github.io/miguelcorrea/images/DAM.jpg)
 ## Technologies
