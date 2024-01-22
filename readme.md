@@ -1,24 +1,33 @@
 # T4.1DevDoc UX UI Accesibilidad Inclusividad 
+
+[Enlace al Proyecto](https://miguelcorreadev.github.io/miguelcorrea/index.html)
 ## Tabla de contenidos
 1. [Leyes UX](#Leyes_UX)
 2. [Tecnologías](#tecnologias)
 3. [Javascript](#javascript)
 4. [Navegación](#navegacion)
-5. [FAQs](#faqs)
 
 ## Leyes UX 
 ***
 En este proyecto se han aplicado las siguientes __leyes UX__: 
 * __Ley de Fitts__: establece que cuanto más grande sea un objeto y más cerca esté de nosotros, más fácil será alcanzarlo, influyó en la convención de hacer que los botones interactivos sean más grandes.
 
-![Image text](https://miguelcorreadev.github.io/miguelcorrea/DOC/imagenes/Fitts.png)
+<div>
+    <p style = 'text-align:center;'>
+    <img src="https://miguelcorreadev.github.io/miguelcorrea/DOC/imagenes/Fitts.png" alt="Fitts" width="600px">
+    </p>
+</div>
+
 
 * __Ley de Jakob__: usar patrones familiares en el diseño para facilitar la experiencia del usuario uso de un menú sencillo y web minimalista.
 * __Efecto de estética-usabilidad__: Interfaz atractiva con imagen visual.
 * __Ley de Postel__: En el formulario de contacto se avisa mediante un alert, si se introduce una estructura de la dirección de email incorrecta o si falta algún campo.
 * __Umbral de Doherty__: En la página de inicio aparece una animación que nos hace percibir que se esta cargando.
-
-![Image text](https://miguelcorreadev.github.io/miguelcorrea/DOC/imagenes/Doherty.png)
+<div>
+    <p style = 'text-align:center;'>
+    <img src="https://miguelcorreadev.github.io/miguelcorrea/DOC/imagenes/Doherty.png" alt="Doherty" width="200px">
+    </p>
+</div>
 
 * __Principio de la Navaja de Occam__: Diseño limpio y minimalista, se puede observar que existe un flujo de navegación claro, el usuario siempre sabe donde esta, el menu queda sobreado en azul en la sección correspondiente (Se puede observar en la captura de la Ley de Fitts).
 
@@ -28,7 +37,7 @@ En este proyecto se han aplicado las siguientes __leyes UX__:
 En este proyecto se ha utilizado las siguientes tecnologías:
 * JavaScript
 * HTML
-* [CSS](https://example.com)
+* CSS
 * Bootstrap
 
 ## Javascript
@@ -75,6 +84,13 @@ empresa3 = new Empresa("3", "InforServer S.L.", "./images/is.png", "http://www.i
 ``` 
 Inicialmente se ha intentado pasar los datos de un archivo JSON, cargarlos en un array o lista y recorriendolo ir realizando la instancia de cada objeto empresa, pero por varios motivos no se pudo realizar en este punto, queda para proximas mejoras.
 
+La 3 variables de empresa se han tenido que declarar con let y de una forma global (aunque no es recomendado), para poder utilizarlas en distintas funciones independientes.
+```
+let empresa1;
+let empresa2;
+let empresa3;
+```
+
 Todos los elementos html de las empresas se ha creado mediante elementos y dinamicamente dentro de un bucle for, desde el código JS, este es un pequeño fragmento:
 
 ```
@@ -98,23 +114,29 @@ empresaImg.alt = empresa.getNombre();
 ```
 ## Navegacion
 ***
-Give instructions on how to collaborate with your project.
-> Maybe you want to write a quote in this part. 
-> It should go over several rows?
-> This is how you do it.
-## FAQs
-***
-A list of frequently asked questions
-1. **This is a question in bold**
-Answer of the first question with _italic words_. 
-2. __Second question in bold__ 
-To answer this question we use an unordered list:
-* First point
-* Second Point
-* Third point
-3. **Third question in bold**
-Answer of the third question with *italic words*.
-4. **Fourth question in bold**
-| Headline 1 in the tablehead | Headline 2 in the tablehead | Headline 3 in the tablehead |
-|:--------------|:-------------:|--------------:|
-| text-align left | text-align center | text-align right |
+En la página web hay dos tipos de navegaciones, una para pc o pantallas de una mayor resolución donde utilizaremos los distintos enlaces que se distribuyen de izquierda a derecha para volver al index presionaremos el primero por la izquierda y los otros presentan el nombre de cada sección  
+
+<div>
+    <p style = 'text-align:center;'>
+    <img src="https://miguelcorreadev.github.io/miguelcorrea/DOC/imagenes/nav.png" alt="Nav" width="700px">
+    </p>
+</div>
+
+Por otro lado, cuando pasamos a pantallas más pequeñas o con menos resolución el menú anterior se adapta a un menú de hamburguesa donde tendremos un pequeño icono con 3 rallas horizontales que al presionarlo se nos desplegará  el menú hacia debajo de forma vertical.
+
+<div>
+    <p style = 'text-align:center;'>
+    <img src="https://miguelcorreadev.github.io/miguelcorrea/DOC/imagenes/nav-h.png" alt="Nav" width="300px">
+    </p>
+</div>
+
+
+Para no repetir código en cada página de la web e cargado el código HTML en la carga de JS y lo inserto con la función __outerHTML__, lo que hago es realizar una querySelector del id cabecera y sobrescribo el __Div__ vacío que hay en cada archivo por el menú de navegación, no es la forma más segura de hacerlo, lo ideal sería realizar la creación de cada elemento como se hizo con las empresas, pero así he probado distintas formas de cargar código y de la otra forma me ha dado luego más problemas con el __CSS__. (Pequeño fragmento de código)
+
+```
+const container = document.querySelector(".cabecera");
+container.outerHTML="<a class='navbar-brand' href='index.html'><img id='imgLogo' src='images/fotoMC.png' alt='FotoPerfil' /> Miguel Correa </a>"+
+
+"<button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>"+
+                "<span class='navbar-toggler-icon'></span></button>"+
+```
