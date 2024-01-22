@@ -31,6 +31,11 @@ body{
     display: inline-block;
     animation: pulse 0.4s 0.3s alternate infinite ease-in-out;
   }
+  @media only screen and (max-width: 768px) { 
+    .loader {
+      font-size: 5em;
+    }
+  }
 
   @keyframes pulse {
     to {
