@@ -4,8 +4,7 @@ let empresa1;
 let empresa2;
 let empresa3;
 document.addEventListener('DOMContentLoaded', function () {
-    if (window.location.pathname.endsWith("index.html")) {
-        // Tu código aquí
+    //if (window.location.pathname.endsWith("index.html")) {
         const spinner = document.querySelector("#box1");
         if (spinner) {
             spinner.outerHTML = '<div id="box1" class="load"><span class="loader"></span></div>';
@@ -15,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
             console.error('Elemento con id "box1" no encontrado.');
         }
-    }
+    //}
      /*----------------------------- NAV ------------------------------------*/
      const container = document.querySelector(".cabecera");
     container.outerHTML="<a class='navbar-brand' href='index.html'><img id='imgLogo' src='images/fotoMC.png' alt='FotoPerfil' /> Miguel Correa </a>"+
